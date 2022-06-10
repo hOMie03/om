@@ -1,0 +1,62 @@
+.msgbox {
+	position: absolute;
+	background-color: rgb(189, 189, 189);	
+	z-index: 2;	
+	border: 1px solid;
+	border-top-color: #fff;
+	border-left-color: #fff;
+	border-bottom-color: #808080;
+	border-right-color: #808080;	
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 15px;
+}
+
+.msgbox .title {
+	background-color: #000080;
+	background: linear-gradient(90deg,navy,#1084d0);
+	color: white;
+	height: 20px;
+	font-weight: bold;
+	cursor: move;
+}
+
+.msgbox .title .icon {
+	position: absolute;
+	margin-top: 1.5px;
+	margin-left: 1.5px;
+	width: 16px ;
+	height: 16px;
+}
+
+.msgbox .title .text {
+	position: absolute;
+	margin-left: 23px;
+	margin-top: 2px;
+}
+
+.msgbox .title .closebtn{
+	width: 15px;
+	height: 12px;
+	padding-bottom: 1em;
+}
+
+.msgbox .buttons{
+	position: relative;
+	display: flex;
+	bottom: 5px;
+	margin-top: 18px;
+  	justify-content: center;
+}
+
+.msgbox .innerb {
+	margin: 2px 2px 2px 2px;
+	border: 1px solid;
+	border-top-color: #808080;
+	border-left-color: #808080;
+	border-bottom-color: #fff;
+	border-right-color: #fff;
+}
+
+.msgbox .innerb p {
+	margin: 12px;
+	text-align: center;
+}

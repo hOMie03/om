@@ -1,0 +1,190 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Ｎｏｓｔａｌｇｉａ Ｐｌａｚａ</title>
+		
+		<link rel="icon" href="icons/WindowsIcon.png" type="image/gif" sizes="16x16">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/msgbox.css">
+		<link rel="stylesheet" type="text/css" href="css/taskbar.css">
+		<link rel="stylesheet" type="text/css" href="css/desktop.css">
+
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/msgbox.js"></script>
+		<script type="text/javascript" src="js/taskbar.js"></script>
+		
+	</head>
+	<body onload="startTime()" ondblclick="startup()">
+		<div id="applications">	
+		</div>
+		
+		<div id="msgboxes"></div>
+		
+		<div class="desktop-icons">	
+			<div class="desktop-icon">
+				<a href="RecycleBin.html" style="text-decoration: none;" title="Recycle Bin">
+					<img src="icons/Recycle Bin.png"></img>
+					<span>Recycle Bin</span>
+				</a>
+			</div><br><br>
+			
+			<div class="desktop-icon">
+				<a href="https://plaza.one/" style="text-decoration: none; text-align: center;" title="Nightwave Plaza Radio">
+					<img src="icons/Music Player.png"></img>
+					<span>Vaporwave Radio</span>
+				</a>
+			</div><br><br>
+			
+			<div class="desktop-icon">
+				<a href="https://theoldnet.com/" style="text-decoration: none; text-align: center;" title="Internet is the future!" target="_blank">
+					<img src="icons/Internet.png"></img>
+					<span>Internet</span>
+				</a>
+			</div><br><br>
+
+			<div class="desktop-icon">
+				<a href="https://old.reddit.com/r/Vaporwave/" style="text-decoration: none; text-align: center;" title="r/vaporwave" target="_blank">
+					<img src="icons/reddit.png"></img>
+					<span>Reddit</span>
+				</a>
+			</div><br><br>
+
+			<div class="desktop-icon">
+				<a href="https://jspaint.app/" style="text-decoration: none; text-align: center;" title="MS Paint">
+					<img src="icons/msPaint.png"></img>
+					<span>Paint</span>
+				</a>
+			</div><br><br>
+
+			<div class="desktop-icon">
+				<a href="https://www.youtube.com/watch?v=loyEdxuNpzw" style="text-decoration: none; text-align: center;" title="Totally not a virus... Trust me.. I'm a dolphin.EXE">
+					<img src="icons/dolphin.png"></img>
+					<span>IM NOT A <strong>VIRUS</strong>.exe</span>
+				</a>
+			</div><br><br>
+			
+			<div class="desktop-icon" onclick="mycomp()">
+				<a href="feedback.html" style="text-decoration: none;" title="Feedback Page! pls do leave 1 :)">
+				<img src="icons/backFeed.png"></img>
+				<span>Feedback</span>
+				</a>
+			</div>
+		</div>
+		
+		<div class="taskbar">
+			<button class="startmenu" onclick="document.getElementById('startdiv').classList.add('slidein');">
+                <img src="icons/start.png" class="icon"></img>
+                <span class="text">Start</span>
+            </button>
+			
+			<div class="time">
+				<span id="clock"></span>
+			</div>
+			
+			<div id="startdiv" class="startdiv slideout">
+				<span class="sideways">r u feelin' the nostalgia?</span>
+				<div class="options">
+					<a class="option" onclick="msggen()">
+                        <img src="icons/Message.png" class="icon"></img>
+                        <div class="optiontxt">Message Generator</div>
+                    </a>
+					<a class="option" href="https://webamp.org/">
+                        <img src="icons/WinAmp.png" class="icon"></img>
+                        <div class="optiontxt">WinAmp Music Player</div>
+                    </a>
+					<a class="option" href="https://my90stv.com/" target="_blank">
+                        <img src="icons/TV.png" class="icon"></img>
+                        <div class="optiontxt">Television</div>
+                    </a>
+					<a class="option" href="https://online.oldgames.sk/" target="_blank">
+                        <img src="icons/Games.png" class="icon"></img>
+                        <div class="optiontxt">Games</div>
+                    </a>
+					<a class="option" href="https://open.spotify.com/playlist/0L8fJKJzdmiMk9L3MdyNXV" target="_blank">
+                        <img src="icons/Music.png" class="icon"></img>
+                        <div class="optiontxt">Spotify</div>
+                    </a>
+					<a class="option" onclick="losecontrol()">
+                        <img src="icons/Control Panel.png" class="icon"></img>
+                        <div class="optiontxt">About Me!</div>
+                    </a>
+					<a class="option" onclick="contact()">
+                        <img src="icons/Contact.png" class="icon"></img>
+                        <div class="optiontxt">Contact Me</div>
+                    </a>
+					<a class="option" href="https://nickarocho.github.io/minesweeper/">
+                        <img src="icons/Minesweeper.png" class="icon"></img>
+                        <div class="optiontxt">Minesweeper</div>
+                    </a>
+
+					<div class="bottom">
+						<a class="option" href="shutdown.html">
+                            <img src="icons/shutdown.png" class="icon"></img>
+                            <div class="optiontxt">Shut down</div>
+                        </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="dummy">
+			<!-- MSGBOX -->
+			<div id="dummymsgbox">
+				<div class="msgbox"  onmouseenter="$(this).draggable({handle: '.title'});" style="margin-top: 20%; margin-left: 40%;">
+					<div class="title">
+						<img src="icons/Disk.png" class="icon"></img>
+						<span class="text"><!--TITLE--></span>
+						<button class="closebtn" onclick="this.parentElement.parentElement.remove();"><p style="margin: -40%;"><b>X</b></p></button>
+					</div>
+					<div class="innerb">
+						<p><!--CONTENT--></p>
+						<div class="buttons">
+							<button onclick="this.parentElement.parentElement.parentElement.remove();//command2">OK</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- IFRAME -->
+			<div id="dummyiframe">
+				<div class="msgbox" onmouseenter="$(this).draggable({handle: '.title'});">
+					<div class="title">
+						<img src="icons/Control Panel.png" class="icon"></img>
+						<span class="text"><!--TITLE--></span>
+						<button class="closebtn" onclick="this.parentElement.parentElement.remove();"><p style="margin: -40%;"><b>X</b></p></button>
+					</div>
+					<div class="innerb">
+						<iframe class="ifr" src="--URL--">
+					
+						</iframe>
+					</div>
+				</div>
+			</div>
+			
+			<!--MESSAGE GENERATOR-->
+			<div id="dummymsggen">
+				<div class="msgbox" id="--ID--" style="top: 30vh; left: 20vw;" onmouseenter="$(this).draggable({handle: '.title'});" style="width: 35vw; height: 285px">
+					<div class="title">
+						<img src="icons/Message.png" class="icon"></img>
+						<span class="text">Message Generator</span>
+						<button class="closebtn" onclick="this.parentElement.parentElement.remove();"><p style="margin: -40%;"><b>X</b></p></button>
+					</div>
+					<div class="innerb">
+						<p>Click "Show" to generate a messagebox!</p><br>
+						<hr>
+						<p>Message:</p><input id="msgtxt" value="This is the Message. It is very funny"></input><br><br>
+						<hr>
+						<p>Title:</p><input id="titletxt" value="Very important Message"></input>
+						<br><br>
+						<div class="buttons">
+							<button onclick="clickgeneratemsg(this);">Show</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>	
+	</body>
+</html>
